@@ -4,7 +4,7 @@
   <env name="TURTLEBOT3_MODEL" value="waffle"/>
   <arg name="model" default="$(env TURTLEBOT3_MODEL)" doc="model type [burger, waffle, waffle_pi]"/>
   
-  <include file="$(find turtlebot3_bringup)/launch/turtlebot3_robot_no_lidar.launch"/>
+  <include file="$(find turtlebot3_bringup)/launch/turtlebot3_robot.launch"/>
 
   <!-- Realsense camera -->
   <include file="$(find realsense_camera)/launch/r200_nodelet_default.launch"/>

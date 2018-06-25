@@ -9,7 +9,6 @@
   <!-- Realsense camera -->
   <include file="$(find turtlebot3_bringup)/launch/turtlebot3_realsense.launch"/>
 
-
   <!-- Navigation -->
   <include file="$(find turtlebot3_bringup)/launch/turtlebot3_remote.launch" />
 
@@ -17,15 +16,15 @@
   <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)">
   </node>
 
-  <!-- Laser Filter Node -->
-  <include file="$(find icclab_turtlebot)/launch/filter.launch"/>
+  <!-- Scanse Sweep laser -->
+  <include file="$(find sweep_ros)/launch/sweep2scan.launch"/>
 
   <!-- AMCL -->
   <arg name="initial_pose_x" default="0.0"/>
   <arg name="initial_pose_y" default="0.0"/>
   <arg name="initial_pose_a" default="0.0"/>
 
-  <include file="$(find turtlebot3_navigation)/launch/amcl.launch.xml">
+  <include file="$(find turtlebot3_navigation)/launch/amcl.launch">
     <arg name="initial_pose_x" value="$(arg initial_pose_x)"/>
     <arg name="initial_pose_y" value="$(arg initial_pose_y)"/>
     <arg name="initial_pose_a" value="$(arg initial_pose_a)"/>

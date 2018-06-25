@@ -9,8 +9,8 @@
   <!-- Realsense camera -->
   <include file="$(find realsense_camera)/launch/r200_nodelet_default.launch"/>
 
-  <!-- Laser Filter Node -->
-  <include file="$(find icclab_turtlebot)/launch/filter.launch"/>
+  <!-- Scanse Sweep laser -->
+  <include file="$(find sweep_ros)/launch/sweep2scan.launch"/>
 
   <!-- move_base -->
   <arg name="cmd_vel_topic" default="/cmd_vel" />
@@ -29,6 +29,7 @@
     <remap from="odom" to="$(arg odom_topic)"/> 
  </node> 
 
- <include file="$(find turtlebot3_bringup)/launch/turtlebot3_remote.launch" />
+  <!-- robot state publisher now running on the cloud --> 
+  <!-- include file="$(find turtlebot3_bringup)/launch/turtlebot3_remote.launch" -->
   
 </launch>
