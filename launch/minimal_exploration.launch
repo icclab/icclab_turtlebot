@@ -34,5 +34,8 @@
 
   <!-- sound play node -->
   <include file="$(find sound_play)/soundplay_node.launch" />
+
+  <!-- Speech-to-Text -->
+  <node pkg="gspeech" type="start_gspeech.py" respawn="false" name="gspeech" output="screen" />
   
 </launch>
