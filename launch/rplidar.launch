@@ -5,7 +5,11 @@
     <param name="frame_id"            type="string" value="rplidar_frame"/>
     <param name="inverted"            type="bool"   value="false"/>
     <param name="angle_compensate"    type="bool"   value="true"/>
+<<<<<<< HEAD
     <!--<remap from="scan" to="laser_scan" />-->
+=======
+    <remap from="scan" to="scan" />
+>>>>>>> 9b7889ccab9be0201fb1547207adf87e3ba8376a
   </node>
   
   <node pkg="rosservice" type="rosservice" name="stopMotor" args="call --wait /stop_motor"/>

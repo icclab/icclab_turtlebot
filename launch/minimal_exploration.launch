@@ -21,21 +21,21 @@
     <arg name="base" value="$(arg base)" />
     <arg name="serialport" value="$(arg serialport)" />
   </include>
-<<<<<<< HEAD
-
-  <include file="$(find turtlebot_navigation)/launch/includes/move_base.launch.xml"/>
-=======
   <include file="$(find turtlebot_bringup)/launch/includes/netbook.launch.xml">
     <arg name="battery" value="$(arg battery)" />
   </include>
 
+  <!-- move_base -->
   <arg name="custom_param_file" default="$(find turtlebot_navigation)/param/dummy.yaml"/>
 
-  <include file="$(find turtlebot_navigation)/launch/includes/move_base.launch.xml">
+  <include file="$(find icclab_turtlebot)/launch/includes/move_base.launch.xml">
     <arg name="custom_param_file" value="$(arg custom_param_file)"/>
   </include>
->>>>>>> 9b7889ccab9be0201fb1547207adf87e3ba8376a
 
   <!-- start motor of rplidar -->
   <node pkg="rosservice" type="rosservice" name="startMotor" args="call --wait /start_motor"/>
+  
+
+  <!-- kinect -->
+  <include file="$(find icclab_turtlebot)/launch/3dsensor.launch" />
 </launch>
