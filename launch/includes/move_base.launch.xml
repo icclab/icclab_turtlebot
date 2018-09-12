@@ -14,6 +14,7 @@
 
   <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
 <<<<<<< HEAD
+<<<<<<< HEAD
     <rosparam file="$(find turtlebot_navigation)/param/costmap_common_params.yaml" command="load" ns="global_costmap" />
     <rosparam file="$(find turtlebot_navigation)/param/costmap_common_params.yaml" command="load" ns="local_costmap" />   
     <rosparam file="$(find turtlebot_navigation)/param/local_costmap_params.yaml" command="load" />   
@@ -23,6 +24,8 @@
     <rosparam file="$(find turtlebot_navigation)/param/global_planner_params.yaml" command="load" />
     <rosparam file="$(find turtlebot_navigation)/param/navfn_global_planner_params.yaml" command="load" />
 =======
+=======
+>>>>>>> 9b7889ccab9be0201fb1547207adf87e3ba8376a
     <rosparam file="$(find icclab_turtlebot)/param/costmap_common_params.yaml" command="load" ns="global_costmap" />
     <rosparam file="$(find icclab_turtlebot)/param/costmap_common_params.yaml" command="load" ns="local_costmap" />   
     <rosparam file="$(find icclab_turtlebot)/param/local_costmap_params.yaml" command="load" />   
@@ -32,6 +35,9 @@
     <rosparam file="$(find icclab_turtlebot)/param/move_base_params.yaml" command="load" />
     <!-- rosparam file="$(find turtlebot_navigation)/param/global_planner_params.yaml" command="load" / -->
     <!-- rosparam file="$(find turtlebot_navigation)/param/navfn_global_planner_params.yaml" command="load" / -->
+<<<<<<< HEAD
+>>>>>>> 9b7889ccab9be0201fb1547207adf87e3ba8376a
+=======
 >>>>>>> 9b7889ccab9be0201fb1547207adf87e3ba8376a
     <!-- external params file that could be loaded into the move_base namespace -->
     <rosparam file="$(arg custom_param_file)" command="load" />

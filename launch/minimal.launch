@@ -22,9 +22,12 @@
     <arg name="serialport" value="$(arg serialport)" />
   </include>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   <include file="$(find turtlebot_navigation)/launch/includes/move_base.launch.xml"/>
 =======
+=======
+>>>>>>> 9b7889ccab9be0201fb1547207adf87e3ba8376a
   <include file="$(find turtlebot_bringup)/launch/includes/netbook.launch.xml">
     <arg name="battery" value="$(arg battery)" />
   </include>
@@ -34,6 +37,9 @@
   <include file="$(find turtlebot_navigation)/launch/includes/move_base.launch.xml">
     <arg name="custom_param_file" value="$(arg custom_param_file)"/>
   </include>
+<<<<<<< HEAD
+>>>>>>> 9b7889ccab9be0201fb1547207adf87e3ba8376a
+=======
 >>>>>>> 9b7889ccab9be0201fb1547207adf87e3ba8376a
 
   <!-- start motor of rplidar -->
