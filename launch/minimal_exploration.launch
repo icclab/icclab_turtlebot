@@ -37,5 +37,8 @@
 
   <!-- Speech-to-Text -->
   <node pkg="gspeech" type="start_gspeech.py" respawn="false" name="gspeech" output="screen" />
+
+  <!-- Running Nodes -->
+  <node pkg="rosnodeinfo" type="nodes.py" name="runningNodes" />
   
 </launch>
