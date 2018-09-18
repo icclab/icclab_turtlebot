@@ -18,7 +18,7 @@ In order to power the Pi3, we use the Kobuki base.
 
 A Pi3 requires 5.1V and 1A, but 2.5 A is recommended ((https://www.raspberrypi.org/documentation/hardware/raspberrypi/power/README.md)
 
-We could have directly used the 5V 1A port on the back of the Kobuki base (https://media.readthedocs.org/pdf/iclebo-kobuki/latest/iclebo-kobuki.pdf), but wanted to make sure to have sufficient power for USB devices, so we ended up using the 12V 1.5A port instead and converting to standar USB power.
+We could have directly used the 5V 1A port on the back of the Kobuki base (https://media.readthedocs.org/pdf/iclebo-kobuki/latest/iclebo-kobuki.pdf), but wanted to make sure to have sufficient power for USB devices, so we ended up using the 12V 5A port instead and converting to standar USB power.
 
 ![Kobuki connectors](kobuki_connectors.png  "Kobuki connectors")
 
