@@ -1,4 +1,4 @@
-# ICCLab Turtlebot HW description
+# ICCLab Turtlebot HW/SW description
 
 ## Turtlebot 2
 
@@ -28,3 +28,30 @@ We built a cable with these parts:
 - 1x standard USB power supply for car lighters (in: 12V out: 5V 2.1 A)
 - 1x standard car lighter cable + female plug (e.g. https://www.conrad.ch/de/tru-components-kfz-buchse-mit-schutzkappe-belastbarkeit-strom-max10-a-1564142.html)
 
+## Software install
+
+Needed icclab packages (manually install from github in your catkin_ws):
+- https://github.com/icclab/icclab_turtlebot (use branch turtlebot2)
+- https://github.com/icclab/laser_filters (use branch indigo-devel)
+- https://github.com/robopeak/rplidar_ros (master branch)
+- https://github.com/icclab/rosnodeinfo
+
+Compile the packages with catkin_make
+
+Also (needed for udev scripts in icclab_turtlebot/tb2_root_files):
+
+    sudo apt install daemon
+    sudo apt-get install ntp
+
+### Trouble installing ros-kinetic-turtlebot on Pi3.
+
+libraspberrypi-dev has same file that libegl1-mesa-dev (dependency of f*ing realsense camera!) wants to install
+
+What we did:
+
+    sudo dpkg --force-all -P libraspberrypi-dev # remove the trobling package, hopefully not breaking anything
+    sudo apt-get -f install
+    
+### Robot state publisher needs upgrade
+
+    sudo apt-get upgrade ros-kinetic-robot-state-publisher
