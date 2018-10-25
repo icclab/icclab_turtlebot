@@ -5,6 +5,7 @@
     <param name="frame_id"            type="string" value="rplidar_frame"/>
     <param name="inverted"            type="bool"   value="false"/>
     <param name="angle_compensate"    type="bool"   value="true"/>
+    <!-- <remap from="scan" to="scanrp" /> -->
     <remap from="scan" to="scan" />
   </node>
   
