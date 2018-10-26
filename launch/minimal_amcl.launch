@@ -5,7 +5,7 @@
   <include file="$(find icclab_turtlebot)/launch/minimal.launch"/>
 
   <!-- amcl, kinect, map_server, and move_base -->
-  <include file="$(find icclab_turtlebot)/launch/amcl_demo.launch"/>
+  <include file="$(find icclab_turtlebot)/launch/amcl_icclab.launch"/>
 
   <!-- runningNodes for webapp UI-->
   <node pkg="rosnodeinfo" type="nodes.py" name="runningNodes" />
