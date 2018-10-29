@@ -96,18 +96,3 @@ On the laptop:
 ```shell
 roslaunch turtlebot_rviz_launchers view_navigation.launch
 ```
-
-## Trouble installing ros-kinetic-turtlebot on Pi3.
-
-###Dependencies
-
-`libraspberrypi-dev` has same file that `libegl1-mesa-dev` (dependency of f*ing realsense camera!) wants to install
-
-What we did:
-
-    sudo dpkg --force-all -P libraspberrypi-dev # remove the troubling package, hopefully not breaking anything
-    sudo apt-get -f install
-
-### Robot state publisher needs upgrade
-
-    sudo apt-get upgrade ros-kinetic-robot-state-publisher
