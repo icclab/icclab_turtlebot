@@ -35,6 +35,7 @@ Needed icclab packages (manually install from github in your catkin_ws):
 - https://github.com/icclab/laser_filters (use branch indigo-devel)
 - https://github.com/robopeak/rplidar_ros (master branch)
 - https://github.com/icclab/rosnodeinfo
+- https://srv-lab-t-401.zhaw.ch/cloudrobotics/clear_total_costmap_recovery
 
 Compile the packages with catkin_make
 
