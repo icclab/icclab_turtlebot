@@ -7,12 +7,6 @@
   <!-- move_base -->
   <include file="$(find icclab_turtlebot)/launch/move_base.launch"/>
   
-  <!-- did a direct remap instead in /opt/ros/kinetic/share/turtlebot_bringup/launch/includes/kobuki/mobile_base.launch.xml -->
-  <!-- republish the imu data topic to imu for cartographer -->
-  <!--<arg name="intopic" default="/mobile_base/sensors/imu_data_raw"/>
-  <arg name="outtopic" default="/imu"/>
-  <node pkg="topic_tools" type="relay" name="relay" args="$(arg intopic) $(arg outtopic)"/>-->
-  
   <!-- kinect --><!-- takes up ~150% CPU -->
   <!--include file="$(find icclab_turtlebot)/launch/3dsensor.launch">
     <arg name="rgb_processing" value="false" />

@@ -22,34 +22,20 @@ obstacle_layer:
   z_resolution: 0.2
   z_voxels: 2
   publish_voxel_map: false
-  observation_sources:  scan scan3d bump
-  scan3d: # kinect camera
-    data_type: LaserScan
-    topic: scan3d
-    marking: true
-    clearing: true
-    min_obstacle_height: 0.15
-    max_obstacle_height: 0.55
+  observation_sources:  scan
   scan: # lidar
     data_type: LaserScan
     topic: scan
-    marking: false
-    clearing: true              # only use lidar to clear obstacles
+    marking: true
+    clearing: true
     min_obstacle_height: 0.25
     max_obstacle_height: 0.35
-  bump: # bumper
-    data_type: PointCloud2
-    topic: mobile_base/sensors/bumper_pointcloud
-    marking: true
-    clearing: false
-    min_obstacle_height: 0.0
-    max_obstacle_height: 0.15
   # for debugging only, let's you see the entire voxel grid
 
 #cost_scaling_factor and inflation_radius were now moved to the inflation_layer ns
 inflation_layer:
   enabled:              true
-  cost_scaling_factor:  5.0  # exponential rate at which the obstacle cost drops off (default: 10)
+  cost_scaling_factor:  10.0  # exponential rate at which the obstacle cost drops off (default: 10)
   inflation_radius:     1.2   # max. distance from an obstacle at which costs are incurred for planning paths.
 
 static_layer:
