@@ -42,6 +42,7 @@ recovery_behaviors:
   #- name: 'clearing_rotation2'
     #type: 'rotate_recovery/RotateRecovery'
 
+# Clear costmap recovery reverts costmap to static map outside reset_distance and clears unknown space around the robot
 super_conservative_reset1:
   reset_distance: 3.0 # distance from robot beyond which obstacles will be cleared from costmap
   layer_names: ["obstacle_layer"]
