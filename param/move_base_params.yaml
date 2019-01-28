@@ -43,9 +43,9 @@ recovery_behaviors:
     #type: 'rotate_recovery/RotateRecovery'
 
 super_conservative_reset1:
-  reset_distance: 0.0 # distance from robot beyond which obstacles will be cleared from costmap
-conservative_reset1:
-  reset_distance: 0.0
+  reset_distance: 3.0 # distance from robot beyond which obstacles will be cleared from costmap
+conservative_reset13:
+  reset_distance: 2.0
 aggressive_reset1:
   reset_distance: 0.0
 #super_conservative_reset2:
