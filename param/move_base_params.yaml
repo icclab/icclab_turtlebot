@@ -28,6 +28,7 @@ recovery_behavior_enabled: true
 recovery_behaviors:
   - name: 'super_aggressive_reset'
     type: 'clear_total_costmap_recovery/ClearTotalCostmapRecovery' # reverts all costmaps to the static map
+    # code for plugin -> https://github.com/icclab/clear_total_costmap_recovery
   #- name: 'super_conservative_reset'
     #type: 'clear_costmap_recovery/ClearCostmapRecovery'
   #- name: 'conservative_reset'
