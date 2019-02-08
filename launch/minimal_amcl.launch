@@ -1,5 +1,5 @@
 <launch>
-  <!-- <group ns="tb3"> -->
+
   <!-- Turtlebot 3 -->
   <env name="TURTLEBOT3_MODEL" value="waffle"/>
   <arg name="model" default="$(env TURTLEBOT3_MODEL)" doc="model type [burger, waffle, waffle_pi]"/>
@@ -7,7 +7,7 @@
   <include file="$(find turtlebot3_bringup)/launch/turtlebot3_robot.launch"/>
 
   <!-- Realsense camera -->
-  <include file="$(find turtlebot3_bringup)/launch/turtlebot3_realsense.launch"/>
+  <!--include file="$(find turtlebot3_bringup)/launch/turtlebot3_realsense.launch"/-->
 
   <!-- Navigation -->
   <include file="$(find turtlebot3_bringup)/launch/turtlebot3_remote.launch" />
@@ -17,7 +17,7 @@
   </node>
 
   <!-- Scanse Sweep laser -->
-  <include file="$(find sweep_ros)/launch/sweep2scan.launch"/>
+  <!--include file="$(find sweep_ros)/launch/sweep2scan.launch"/-->
 
   <!-- AMCL -->
   <arg name="initial_pose_x" default="0.0"/>
@@ -37,14 +37,21 @@
     <param name="base_local_planner" value="dwa_local_planner/DWAPlannerROS" />
 
     <rosparam file="$(find icclab_turtlebot)/param/costmap_common_params_$(arg model).yaml" command="load" ns="global_costmap" />
-    <rosparam file="$(find icclab_turtlebot)/param/costmap_common_params_$(arg model).yaml" command="load" ns="local_costmap" />
+    <rosparam file="$(find icclab_turtlebot)/param/costmap_common_params_$(arg model)_icclab.yaml" command="load" ns="local_costmap" />
     <rosparam file="$(find icclab_turtlebot)/param/local_costmap_params.yaml" command="load" />
     <rosparam file="$(find icclab_turtlebot)/param/global_costmap_params.yaml" command="load" />
     <rosparam file="$(find icclab_turtlebot)/param/move_base_params.yaml" command="load" />
-    <rosparam file="$(find icclab_turtlebot)/param/dwa_local_planner_params_waffle.yaml" command="load" /> 
+    <rosparam file="$(find icclab_turtlebot)/param/dwa_local_planner_params_waffle.yaml" command="load" />
+    <rosparam file="$(find icclab_turtlebot)/param/global_planner_params.yaml" command="load" />
    
     <remap from="cmd_vel" to="$(arg cmd_vel_topic)"/>
     <remap from="odom" to="$(arg odom_topic)"/>
   </node> 
-  <!-- </group> -->
+
+  <!-- Text-to-Speech -->
+  <!--include file="$(find sound_play)/soundplay_node.launch" /-->
+
+  <!-- Running Nodes -->
+  <!--node pkg="rosnodeinfo" type="nodes.py" name="runningNodes" /-->
+
 </launch>

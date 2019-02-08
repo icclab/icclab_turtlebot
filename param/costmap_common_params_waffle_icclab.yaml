@@ -8,7 +8,7 @@ inflation_radius: 1.5
 cost_scaling_factor: 2.5
 
 map_type: costmap
-transform_tolerance: 0.2
+transform_tolerance: 0.5
 observation_sources: scan camera
 scan: {data_type: LaserScan, topic: scan, marking: true, clearing: true}
 camera: {data_type: PointCloud2, topic: camera/depth/points, marking: true, clearing: true}
