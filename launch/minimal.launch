@@ -28,5 +28,8 @@
   <!-- start motor of rplidar -->
   <node pkg="rosservice" type="rosservice" name="startMotor" args="call --wait /start_motor"/>
 
+  <!-- dummy node that calls rosservice /stop_motor on shutdown -->
+  <node pkg="icclab_turtlebot" type="stop_rplidar_motor.py" name="stop_rplidar_motor"/>
+
 </launch>
 
