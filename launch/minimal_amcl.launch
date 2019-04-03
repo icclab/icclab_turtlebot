@@ -8,7 +8,7 @@
   <include file="$(find icclab_turtlebot)/launch/amcl_icclab.launch"/>
 
   <!-- runningNodes for webapp UI-->
-  <node pkg="rosnodeinfo" type="nodes.py" name="runningNodes" />
+  <include file="$(find rosnodeinfo)/launch/node_info_publisher.launch"/>
 
   <!-- Text-to-Speech -->
   <include file="$(find sound_play)/soundplay_node.launch" />

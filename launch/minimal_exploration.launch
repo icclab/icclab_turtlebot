@@ -7,16 +7,8 @@
   <!-- move_base -->
   <include file="$(find icclab_turtlebot)/launch/move_base.launch"/>
   
-  <!-- kinect --><!-- takes up ~150% CPU -->
-  <!--include file="$(find icclab_turtlebot)/launch/3dsensor.launch">
-    <arg name="rgb_processing" value="false" />
-    <arg name="depth_registration" value="false" />
-    <arg name="depth_processing" value="false" />
-    <arg name="scan_topic" value="/scan3d" />
-  </include-->
-
   <!-- runningNodes for webapp UI-->
-  <node pkg="rosnodeinfo" type="nodes.py" name="runningNodes" />
+  <include file="$(find rosnodeinfo)/launch/node_info_publisher.launch"/>
 
   <!-- Text-to-Speech -->
   <include file="$(find sound_play)/soundplay_node.launch" />
