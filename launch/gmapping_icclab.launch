@@ -39,6 +39,4 @@
     <remap from="scan" to="$(arg scan_topic)"/>
   </node>
  
-  
-  <!--<include file="$(find turtlebot_navigation)/launch/includes/move_base.launch.xml"/>-->
 </launch>

@@ -11,12 +11,14 @@
   <arg name="odom_topic" default="odom" />
   <arg name="laser_topic" default="scan" />
   <arg name="custom_param_file" default="$(find turtlebot_navigation)/param/dummy.yaml"/>
+  <arg name="slam" default="false"/>
 
   <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
     <rosparam file="$(find icclab_turtlebot)/param/costmap_common_params.yaml" command="load" ns="global_costmap" />
     <rosparam file="$(find icclab_turtlebot)/param/costmap_common_params.yaml" command="load" ns="local_costmap" />   
-    <rosparam file="$(find icclab_turtlebot)/param/local_costmap_params.yaml" command="load" />   
-    <rosparam file="$(find icclab_turtlebot)/param/global_costmap_params.yaml" command="load" />
+    <rosparam file="$(find icclab_turtlebot)/param/local_costmap_params.yaml" command="load" />
+    <rosparam if="$(arg slam)" file="$(find icclab_turtlebot)/param/global_costmap_params_no_map.yaml" command="load" />
+    <rosparam unless="$(arg slam)" file="$(find icclab_turtlebot)/param/global_costmap_params_map.yaml" command="load" />
     <rosparam file="$(find icclab_turtlebot)/param/dwa_local_planner_params.yaml" command="load" />
     <rosparam file="$(find icclab_turtlebot)/param/move_base_params.yaml" command="load" />
     <rosparam file="$(find icclab_turtlebot)/param/global_planner_params.yaml" command="load" />
