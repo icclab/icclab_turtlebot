@@ -13,10 +13,7 @@
   <include file="$(find turtlebot3_bringup)/launch/turtlebot3_robot.launch"/>
 
   <!-- Realsense camera -->
-  <include file="$(find realsense_camera)/launch/r200_nodelet_default.launch"/>
-
-  <!-- Scanse Sweep laser -->
-  <include file="$(find sweep_ros)/launch/sweep2scan.launch"/>
+  <!--include file="$(find realsense_camera)/launch/r200_nodelet_default.launch"/-->
 
   <!-- move_base -->
   <arg name="cmd_vel_topic" default="/cmd_vel" />
@@ -29,7 +26,7 @@
     <rosparam file="$(find icclab_turtlebot)/param/local_costmap_params.yaml" command="load" />
     <rosparam file="$(find icclab_turtlebot)/param/global_costmap_params.yaml" command="load" />
     <rosparam file="$(find icclab_turtlebot)/param/move_base_params.yaml" command="load" />
-    <rosparam file="$(find icclab_turtlebot)/param/dwa_local_planner_params.yaml" command="load" /> 
+    <rosparam file="$(find icclab_turtlebot)/param/dwa_local_planner_params_$(arg model).yaml" command="load" /> 
    
     <remap from="/cmd_vel" to="/cmd_vel"/>
     <remap from="odom" to="$(arg odom_topic)"/> 
@@ -38,5 +35,4 @@
   <!-- Gmapping -->
   <include file="$(find turtlebot3_slam)/launch/turtlebot3_slam.launch"/>
   
-  <!--/group--> 
 </launch>
