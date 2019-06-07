@@ -110,19 +110,71 @@ Visualization Manager:
           Use rainbow: true
           Value: false
         - Class: rviz/TF
-          Enabled: false
+          Enabled: true
           Frame Timeout: 15
           Frames:
             All Enabled: false
+            base_footprint:
+              Value: true
+            base_link:
+              Value: true
+            base_scan:
+              Value: true
+            camera_depth_frame:
+              Value: true
+            camera_depth_optical_frame:
+              Value: true
+            camera_link:
+              Value: true
+            camera_rgb_frame:
+              Value: true
+            camera_rgb_optical_frame:
+              Value: true
+            caster_back_left_link:
+              Value: true
+            caster_back_right_link:
+              Value: true
+            imu_link:
+              Value: true
+            map:
+              Value: true
+            odom:
+              Value: true
+            wheel_left_link:
+              Value: true
+            wheel_right_link:
+              Value: true
           Marker Scale: 1
           Name: TF
           Show Arrows: true
           Show Axes: true
           Show Names: false
           Tree:
-            {}
+            map:
+              odom:
+                base_footprint:
+                  base_link:
+                    base_scan:
+                      {}
+                    camera_link:
+                      camera_depth_frame:
+                        camera_depth_optical_frame:
+                          {}
+                      camera_rgb_frame:
+                        camera_rgb_optical_frame:
+                          {}
+                    caster_back_left_link:
+                      {}
+                    caster_back_right_link:
+                      {}
+                    imu_link:
+                      {}
+                    wheel_left_link:
+                      {}
+                    wheel_right_link:
+                      {}
           Update Interval: 0
-          Value: false
+          Value: true
         - Alpha: 1
           Class: rviz/RobotModel
           Collision Enabled: false
@@ -138,6 +190,11 @@ Visualization Manager:
               Show Axes: false
               Show Trail: false
             base_link:
+              Alpha: 1
+              Show Axes: false
+              Show Trail: false
+              Value: true
+            base_scan:
               Alpha: 1
               Show Axes: false
               Show Trail: false
@@ -163,132 +220,20 @@ Visualization Manager:
               Alpha: 1
               Show Axes: false
               Show Trail: false
-            caster_back_link:
+            caster_back_left_link:
               Alpha: 1
               Show Axes: false
               Show Trail: false
               Value: true
-            caster_front_link:
+            caster_back_right_link:
               Alpha: 1
               Show Axes: false
               Show Trail: false
               Value: true
-            cliff_sensor_front_link:
+            imu_link:
               Alpha: 1
               Show Axes: false
               Show Trail: false
-            cliff_sensor_left_link:
-              Alpha: 1
-              Show Axes: false
-              Show Trail: false
-            cliff_sensor_right_link:
-              Alpha: 1
-              Show Axes: false
-              Show Trail: false
-            gyro_link:
-              Alpha: 1
-              Show Axes: false
-              Show Trail: false
-            plate_bottom_link:
-              Alpha: 1
-              Show Axes: false
-              Show Trail: false
-              Value: true
-            plate_middle_link:
-              Alpha: 1
-              Show Axes: false
-              Show Trail: false
-              Value: true
-            plate_top_link:
-              Alpha: 1
-              Show Axes: false
-              Show Trail: false
-              Value: true
-            pole_bottom_0_link:
-              Alpha: 1
-              Show Axes: false
-              Show Trail: false
-              Value: true
-            pole_bottom_1_link:
-              Alpha: 1
-              Show Axes: false
-              Show Trail: false
-              Value: true
-            pole_bottom_2_link:
-              Alpha: 1
-              Show Axes: false
-              Show Trail: false
-              Value: true
-            pole_bottom_3_link:
-              Alpha: 1
-              Show Axes: false
-              Show Trail: false
-              Value: true
-            pole_bottom_4_link:
-              Alpha: 1
-              Show Axes: false
-              Show Trail: false
-              Value: true
-            pole_bottom_5_link:
-              Alpha: 1
-              Show Axes: false
-              Show Trail: false
-              Value: true
-            pole_kinect_0_link:
-              Alpha: 1
-              Show Axes: false
-              Show Trail: false
-              Value: true
-            pole_kinect_1_link:
-              Alpha: 1
-              Show Axes: false
-              Show Trail: false
-              Value: true
-            pole_middle_0_link:
-              Alpha: 1
-              Show Axes: false
-              Show Trail: false
-              Value: true
-            pole_middle_1_link:
-              Alpha: 1
-              Show Axes: false
-              Show Trail: false
-              Value: true
-            pole_middle_2_link:
-              Alpha: 1
-              Show Axes: false
-              Show Trail: false
-              Value: true
-            pole_middle_3_link:
-              Alpha: 1
-              Show Axes: false
-              Show Trail: false
-              Value: true
-            pole_top_0_link:
-              Alpha: 1
-              Show Axes: false
-              Show Trail: false
-              Value: true
-            pole_top_1_link:
-              Alpha: 1
-              Show Axes: false
-              Show Trail: false
-              Value: true
-            pole_top_2_link:
-              Alpha: 1
-              Show Axes: false
-              Show Trail: false
-              Value: true
-            pole_top_3_link:
-              Alpha: 1
-              Show Axes: false
-              Show Trail: false
-              Value: true
-            rplidar_frame:
-              Alpha: 1
-              Show Axes: false
-              Show Trail: false
-              Value: true
             wheel_left_link:
               Alpha: 1
               Show Axes: false
