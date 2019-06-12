@@ -1,17 +1,19 @@
+<!-- NOTE: this file is configured for exploration mode on robopatrol -->
 <launch>
   
+  <!-- by default do not launch gmapping -->
   <arg name="launch_gmapping" default="false"/>
 
   <!-- minimal launch -->
   <include file="$(find icclab_turtlebot)/launch/minimal.launch"/>
 
-  <!-- runningNodes for webapp UI -->
+  <!-- running nodes on robot for webapp gui -->
   <include file="$(find rosnodeinfo)/launch/node_info_publisher.launch"/>
 
-  <!-- Text-to-Speech -->
+  <!-- text-to-speech -->
   <include file="$(find sound_play)/soundplay_node.launch" />
 
-  <!-- Gmapping -->
+  <!-- gmapping -->
   <include if="$(arg launch_gmapping)" file="$(find turtlebot3_slam)/launch/turtlebot3_gmapping.launch"/>
 
 </launch>

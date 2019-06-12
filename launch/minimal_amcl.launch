@@ -1,12 +1,17 @@
+<!-- NOTE: this file is configured for navigation mode on robopatrol -->
 <launch>
+
+  <!-- by default do not launch map server -->
+  <arg name="launch_map_server" default="false"/>
 
   <!-- minimal launch -->
   <include file="$(find icclab_turtlebot)/launch/minimal.launch"/>
 
-  <!-- AMCL -->
+  <!-- map server -->
   <arg name="map_file" default="$(find icclab_turtlebot)/icclab_latest_map.yaml"/>
-  <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)"/>
+  <node if="$(arg launch_map_server)" name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)"/>
 
+  <!-- amcl -->
   <arg name="initial_pose_x" default="0.0"/>
   <arg name="initial_pose_y" default="0.0"/>
   <arg name="initial_pose_a" default="-1.57079632679"/>
@@ -17,10 +22,10 @@
     <arg name="initial_pose_a" value="$(arg initial_pose_a)"/>
   </include>
 
-  <!-- runningNodes for webapp UI-->
+  <!-- running nodes on robot for webapp gui -->
   <include file="$(find rosnodeinfo)/launch/node_info_publisher.launch"/>
 
-  <!-- Text-to-Speech -->
+  <!-- text-to-speech -->
   <include file="$(find sound_play)/soundplay_node.launch" />
 
 </launch>
