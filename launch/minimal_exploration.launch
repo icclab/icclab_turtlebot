@@ -1,4 +1,5 @@
 <!-- MAKE SURE RPLIDAR NODE IS RUNNING -->
+<!-- NOTE: this file is configured for exploration mode on robopatrol -->
 <launch>
 
   <arg name="launch_gmapping" default="false"/>
@@ -11,13 +12,13 @@
     <arg name="slam" value="true"/>
   </include>
   
-  <!-- runningNodes for webapp UI-->
+  <!-- running nodes on robot for webapp gui -->
   <include file="$(find rosnodeinfo)/launch/node_info_publisher.launch"/>
 
-  <!-- Text-to-Speech -->
+  <!-- text-to-speech -->
   <include file="$(find sound_play)/soundplay_node.launch" />
 
-  <!-- GMapping -->
+  <!-- gmapping -->
   <include if="$(arg launch_gmapping)" file="$(find icclab_turtlebot)/launch/gmapping_icclab.launch"/>
 
 </launch>
