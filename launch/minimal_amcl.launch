@@ -1,13 +1,16 @@
 <!-- MAKE SURE RPLIDAR NODE IS RUNNING -->
 <!-- NOTE: this file is configured for navigation mode on robopatrol -->
 <launch>
+
+  <!-- by default do not launch map server -->
+  <arg name="launch_map_server" default="false"/>
  
   <!-- minimal launch -->
   <include file="$(find icclab_turtlebot)/launch/minimal.launch"/>
 
   <!-- amcl, kinect, map_server, and move_base -->
   <include file="$(find icclab_turtlebot)/launch/amcl_icclab.launch">
-    <arg name="launch_map_server" value="false"/>
+    <arg name="launch_map_server" value="$(arg launch_map_server)"/>
   </include>
 
   <!-- running nodes on robot for webapp gui -->
