@@ -1,9 +1,12 @@
 # icclab_turtlebot
 
-Base scripts for the turtlebots at ICCLab.
+Clone this branch on your local machine (not the robot) to view turtlebot operation, and to test launch files/scripts in simulation with Gazebo.
 
-These scripts enable mapping and navigation using a LIDAR device (rplidar) upon a turtlebot 2.
-
-See the [`turtlebot2`](https://github.com/icclab/icclab_turtlebot/tree/turtlebot2) branch for the package that should be deployed upon the robot
+Execute the command below to view turtlebot operation (e.g. exploration with gmapping, navigation with amcl)
+`````
+roslaunch icclab_turtlebot view_remote_turtlebot_navigation.launch
+`````
 
 For further documentation please [see here](./docs/).
+
+**NOTE:** This branch has not been very well maintained. Launch files, scripts, and documentation may be outdated and require updates.
