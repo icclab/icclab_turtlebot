@@ -8,7 +8,7 @@
   <include file="$(find icclab_turtlebot)/launch/minimal.launch"/>
 
   <!-- map server -->
-  <arg name="map_file" default="$(find icclab_turtlebot)/icclab_latest_map.yaml"/>
+  <arg name="map_file" default="$(find icclab_turtlebot)/maps/icclab_latest_map.yaml"/>
   <node if="$(arg launch_map_server)" name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)"/>
 
   <!-- amcl -->
