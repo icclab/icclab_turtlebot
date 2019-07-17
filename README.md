@@ -1,7 +1,5 @@
 # icclab_turtlebot
 
-Base scripts for the turtlebots at ICCLab.
+This branch is a ROS package for TurtleBot2. Most of the launch files, parameters, and scripts are modified versions of files from ROS packages **turtlebot**, **turtlebot_navigation**, and **turtlebot_bringup**.
 
-These scripts enable mapping and navigation using a LIDAR device (rplidar) upon a turtlebot 2.
-
-For further documentation please [see here](https://github.com/icclab/icclab_turtlebot/tree/kinetic/docs), on the kinetic branch.
+For documentation please [see the wiki](https://github.com/icclab/icclab_turtlebot/wiki/Turtlebot2-Package)
