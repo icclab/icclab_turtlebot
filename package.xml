@@ -13,5 +13,6 @@
   <run_depend>turtlebot3</run_depend>
   <run_depend>turtlebot3_navigation</run_depend>
   <run_depend>gmapping</run_depend>
+  <run_depend>dwa_local_planner</run_depend>
 
 </package>

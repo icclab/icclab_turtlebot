@@ -14,7 +14,7 @@
   <!-- amcl -->
   <arg name="initial_pose_x" default="0.0"/>
   <arg name="initial_pose_y" default="0.0"/>
-  <arg name="initial_pose_a" default="-1.57079632679"/>
+  <arg name="initial_pose_a" default="0.0"/>
 
   <include file="$(find turtlebot3_navigation)/launch/amcl.launch">
     <arg name="initial_pose_x" value="$(arg initial_pose_x)"/>

@@ -1,0 +1,21 @@
+<launch>
+  <!-- Arguments -->
+  <arg name="model" default="$(env TURTLEBOT3_MODEL)" doc="model type [burger, waffle, waffle_pi]"/>
+  <arg name="has_real_sense" default="false"/>
+  <arg name="slam_methods" default="gmapping"/> <!-- gmapping, cartographer, hector, karto, frontier_exploration -->
+
+  <!-- Realsense camera -->
+  <include if="$(arg has_real_sense)" file="$(find realsense_camera)/launch/r200_nodelet_rgbd.launch"/>
+
+  <include file="$(find turtlebot3_bringup)/launch/turtlebot3_robot.launch"/>
+
+  <!-- move_base -->
+  <include file="$(find icclab_turtlebot)/launch/move_base.launch"/>
+ 
+  <!-- slam -->
+  <include file="$(find turtlebot3_slam)/launch/turtlebot3_slam.launch">
+    <arg name="slam_methods" value="$(arg slam_methods)"/>
+    <arg name="open_rviz" value="false"/>
+  </include>
+  
+</launch>
