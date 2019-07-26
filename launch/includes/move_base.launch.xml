@@ -21,7 +21,6 @@
     <rosparam unless="$(arg slam)" file="$(find icclab_turtlebot)/param/global_costmap_params_map.yaml" command="load" />
     <rosparam file="$(find icclab_turtlebot)/param/dwa_local_planner_params.yaml" command="load" />
     <rosparam file="$(find icclab_turtlebot)/param/move_base_params.yaml" command="load" />
-    <rosparam file="$(find icclab_turtlebot)/param/global_planner_params.yaml" command="load" />
     <rosparam file="$(find icclab_turtlebot)/param/navfn_global_planner_params.yaml" command="load" />
     <!-- external params file that could be loaded into the move_base namespace -->
     <rosparam file="$(arg custom_param_file)" command="load" />
