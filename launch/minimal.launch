@@ -2,12 +2,19 @@
   <!-- Turtlebot 3 -->
 
   <arg name="model" default="$(env TURTLEBOT3_MODEL)" doc="model type [burger, waffle, waffle_pi]"/>
+  <!-- camera args -->
+  <!-- I assume that if it has not realsence it has pi camera -->
   <arg name="has_real_sense" default="false"/>
+  <!-- arg name="has_pi_camera" default="true"/-->
   
   <include file="$(find turtlebot3_bringup)/launch/turtlebot3_robot.launch"/>
 
   <!-- Realsense camera -->
   <include if="$(arg has_real_sense)" file="$(find realsense_camera)/launch/r200_nodelet_rgbd.launch"/>
+  <!-- Pi Camera -->
+  <!-- unless arg means if not -->
+  <include unless="$(arg has_real_sense)" file="$(find marker_localization)/launch/launch_code.launch"/>
+
 
   <!-- move_base -->
   <include file="$(find icclab_turtlebot)/launch/move_base.launch" />
