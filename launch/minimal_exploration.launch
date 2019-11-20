@@ -16,4 +16,8 @@
   <!-- gmapping -->
   <include if="$(arg launch_gmapping)" file="$(find turtlebot3_slam)/launch/turtlebot3_gmapping.launch"/>
 
+  <!-- topic throttle nodes -->
+  <node name="imu_throttler" type="throttle" pkg="topic_tools" args="messages /imu 10" />
+  <node name="odom_throttler" type="throttle" pkg="topic_tools" args="messages /odom 10" />
+
 </launch>
