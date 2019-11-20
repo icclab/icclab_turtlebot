@@ -13,7 +13,7 @@
   <include if="$(arg has_real_sense)" file="$(find realsense_camera)/launch/r200_nodelet_rgbd.launch"/>
   <!-- Pi Camera -->
   <!-- unless arg means if not -->
-  <include unless="$(arg has_real_sense)" file="$(find marker_localization)/launch/launch_code.launch"/>
+  <!--include unless="$(arg has_real_sense)" file="$(find marker_localization)/launch/launch_code.launch"/-->
 
 
   <!-- move_base -->
