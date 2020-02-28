@@ -1,7 +1,7 @@
 #!/bin/bash
 
 source /opt/ros/kinetic/setup.bash
-source /home/turtlebot/catkin_ws/devel/setup.bash
+source /home/robot/catkin_ws/devel/setup.bash
 
 stream_func(){
 rosrun virtual_cam stream _device:=/dev/video3 _width:=640 _height:=480 _fourcc:=YUYV image:=camera/rgb/image_raw/
