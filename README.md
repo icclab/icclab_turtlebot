@@ -2,6 +2,10 @@
 
 Clone this branch on your local machine (not the robot) to view turtlebot operation, and to test launch files/scripts in simulation with Gazebo.
 
+Execute the command below to view the turtlebot in simulation and navigate it over a map:
+
+roslaunch icclab_turtlebot gmapping_icclab_simulation.launch
+
 Execute the command below to view turtlebot operation (e.g. exploration with gmapping, navigation with amcl)
 `````
 roslaunch icclab_turtlebot view_remote_turtlebot_navigation.launch
